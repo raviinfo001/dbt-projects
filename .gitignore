@@ -4,4 +4,4 @@
 */logs/
 *venvs*
 */.vscode/
-*.logs
+*.log
