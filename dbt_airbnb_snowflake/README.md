@@ -1,15 +1,44 @@
-Welcome to your new dbt project!
+# dbt_airbnb_snowflake
 
-### Using the starter project
+This project uses [dbt](https://www.getdbt.com/) to transform and test Airbnb listings data on Snowflake. It includes models for cleansed listings and hosts, with robust data quality checks.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Project Structure
 
+- **models/**: Contains dbt models, including `dim_listings_cleansed`.
+- **schema.yml**: Defines model metadata, column descriptions, and tests.
+- **README.md**: Project documentation and usage instructions.
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Key Models
+
+- **dim_listings_cleansed**: Cleaned Airbnb listings data with tests for uniqueness, relationships, accepted values, and positive values.
+- **dim_hosts_cleansed**: Hosts data referenced by listings.
+
+## Getting Started
+
+1. Install dbt and configure your Snowflake profile.
+2. Run transformations:
+   ```
+   dbt run
+   ```
+3. Test data quality:
+   ```
+   dbt test
+   ```
+
+## Data Quality
+
+Column-level tests ensure:
+- Uniqueness and non-null values for IDs
+- Referential integrity between listings and hosts
+- Accepted values for room types
+- Positive values for minimum nights
+
+## Resources
+
+- [dbt Documentation](https://docs.getdbt.com/docs/introduction)
+- [dbt Discourse](https://discourse.getdbt.com/)
+- [dbt Community Slack](https://community.getdbt.com/)
+- [dbt Events](https://events.getdbt.com)
+- [dbt Blog](https://blog.getdbt.com/)
+
+---
