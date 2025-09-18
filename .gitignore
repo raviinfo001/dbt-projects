@@ -5,3 +5,5 @@
 *venvs*
 */.vscode/
 *.log
+*/lib/
+*.exe
