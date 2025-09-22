@@ -1,9 +1,12 @@
 
 */target/
 */dbt_packages/
-*/logs/
+*dbt_lab/
+*logs*
 *venvs*
 */.vscode/
 *.log
 */lib/
 *.exe
+*.tmp*
+*__pycache__*
