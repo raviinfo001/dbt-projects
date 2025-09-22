@@ -32,3 +32,7 @@ models:
       +materialized: table
     1_src:
       +materialized: ephemeral    # CTEs are not created as views 
+
+# Pass default values to dbt project variables 
+vars:
+  your_name: default_name_for_this_project
